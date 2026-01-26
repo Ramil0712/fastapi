@@ -1,0 +1,12 @@
+body{
+
+}
+
+.header{
+  background-image: url(../images/header-bg.jpg);
+  background-image: image-set(
+    '../images/header-bg.avif' type('image/avif'),
+    '../images/header-bg.webp' type('image/webp'),
+    '../images/header-bg.jpg' type('image/jpg'),
+  );
+}
