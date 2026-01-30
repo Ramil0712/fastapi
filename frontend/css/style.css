@@ -2,6 +2,7 @@
   /* ===== Colors ===== */
   --white-F5-color: #f5f5f5;
   --black-font-color: #2b2b2b;
+  --black-bg-color: #171717;
 }
 
 html{
@@ -73,6 +74,7 @@ body{
   width: 40px;
   height:24px;
   position: relative;
+  z-index: 100;
 }
 
 .menu__btn::after,
@@ -147,12 +149,62 @@ body{
 }
 
 @media (max-width: 1300px){
+
   .menu__btn{
     display: flex;
   }
 
   .menu__list{
+    position: absolute;
+    inset: 0;
+    background: var(--black-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform .3s ease-in-out;
+  }
+}
+
+.menu__list.active{
+  transform: translateY(0);
+}
+
+@media(max-width: 740px)  {
+  .header__top{
+    padding: 40px 0;
+  }
+  .header__title{
+    padding-bottom: 75px;
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 540px){
+  .header__phone img{
+    width: 24px;
+  }
+
+  .header__phone span{
     display: none;
   }
+
+  .header__title{
+    padding-top: 50px;
+    font-size: 48px;
+  }
+
+  .header__text{
+    font-size: 22px;
+  }
+
+  .header__btn{
+    font-size: 16px;
+    padding: 16px 49px;
+  }
+}
+
+@media (max-width: 360px){
 
 }
