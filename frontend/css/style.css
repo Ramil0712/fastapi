@@ -19,6 +19,12 @@ a{
   text-decoration: none;
 }
 
+button{
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
 body{
   font-family: "Roboto", sans-serif;
   /* font-family: "Montserrat", sans-serif; */
@@ -58,6 +64,41 @@ body{
 
 .menu{
   justify-self: start;
+}
+
+.menu__btn{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height:24px;
+  position: relative;
+}
+
+.menu__btn::after,
+.menu__btn::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--white-F5-color);
+}
+
+.menu__btn::after{
+  top: 0;
+}
+
+.menu__btn::before{
+  bottom: 0;
+}
+
+
+.menu__btn span{
+  height: 2px;
+  width: 40px;
+  background-color: var(--white-F5-color);
+  width: 100%;
 }
 
 .menu__list{
@@ -106,5 +147,12 @@ body{
 }
 
 @media (max-width: 1300px){
+  .menu__btn{
+    display: flex;
+  }
+
+  .menu__list{
+    display: none;
+  }
 
 }
